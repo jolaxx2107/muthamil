@@ -1,52 +1,65 @@
 <!DOCTYPE.html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <title>login</title>
     </head>
     <style>
         .border{
-            width: 100%;padding: 14px 20px;margin: 8px 0;border:1px solid;border-radius: 4px;cursor: pointer;text-align:center;
+            width: 100%;padding: 14px 20px;margin: 8px 0;border:1px solid;border-radius: 4px;cursor: pointer;
  }
          .p{ 
             text-align:left;font-family:sans-serif;width:50%;height:70%"
-         }
+        }
+        .flex{
+  display: flex;flex-direction:row;justify-content:space-around;
+}
+.flex div {
+ 
+  margin: 10px;
+  padding: 15px;
+  font-size: 15px;
+}
     </style>
     <body>
        <section height="100%" width="100%">
-        <div style="width:55%;float:left">
-        <img src="logo.png" ;align="right" width="10%" height="10%"></img><b></b>
+        <div style="width:60%;float:left">
+        <img src="logo.png" ;align="right" width="10%" height="10%"></img>
         <BR>
             <BR>
-               <center> <form class="p">
-                 <B>Login</B><br>
-                <h6 style="text-size-adjust:30px"><p>Measure the performance of cryptos, get high profits!</p></h6>
-                
-            
-                <input class="border" type="submit" value="sign in with google" ><br>
+               <center> 
+                <form id="form" class="p">
+                <B>Login</B>
+                 <h5 style="text-size-adjust:30px"><p>Measure the performance of cryptos, get high profits!</p></h5>
+                <button class="border" type="submit" value="sign in with google" >Sign in with google</button><br>
                 <br>
-                <label> EMAIL</label><br>
-        
-                <input class="border" type="text" value="mail@website.com"><br>
+                <div style="display:flex"><hr width="120px"> Sign in with gmail <hr width="120px"></div>
                 <br>
-                <label>PASSWORD</label><br>
-            
-                <input class="border" type="text" value="Min.8character"><br>
+                <label> Email</label><br>
+                <input class="border" type="text" id="email"><br>
+                <span id="email_error" style="color:red;"></span>
                 <br>
-               <label><input  type="checkbox" value="Remember">Remember me</label>
-               <a href="">forget password?</a><br>
+                <label>Password</label><br>
+                <input  class="border" type="Password" id="Password">Minimum 8 characters
+                <span id="password_error" style="color:red"></span>
+               <div class="flex" style="text-align:left"> <div><label><input  type="checkbox" value="Remember">Remember me</label></div>
+               <div  style="text-align:right;"><a href="">forget password?</a><br></div></div>
                 <br>
-                <input class="border" type="submit" value="login" style="background-color:blue;color:white;"><br>
+                <button  class="border" type="submit" id="submit" value="login" style="background-color:blue;color:white;">Login</button><br>
                 <br>
                 </td></tr></table>
                  </form></center>
         </div>
-        <div style="width:45%;height:100%;float:right;background-image:linear-gradient(rgb(104,65,216),rgb(140,110,229),rgb(104,65,216))">
+        <div style="width:40%;height:100%;float:right;background-image:linear-gradient(rgb(104,65,216),rgb(140,110,229),rgb(104,65,216))">
         
          <h1 style="text-align:center;color:white;font-family:sans-serif;font-size:50px">Welcome to our community</h1>
          <p style="text-align:center;color:white">Personalized, updated daily, and beautifully presented.</p>
          <p style="text-align:center;color:white">Sign in to find your dream ways of earning and gain full access to platform functions.</p>
-         <img src="diamond.png" ;align="center" width="95%" height="50%" ></img>
+         <img src="diamond.png" ;align="center" width="90%" height="50%" ></img>
         </div>
        </section>
+       <script src="script.js"></script>
     </body>
 </html>
